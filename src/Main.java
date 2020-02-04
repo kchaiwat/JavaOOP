@@ -1,20 +1,12 @@
 public class Main {
     public static  void main(String [] args){
-        Employee e1 = new Employee(); // Create Object
-        e1.setId("1");
-        e1.setName("Chaiwat");
-        e1.setSalary(25000.0);
 
-        System.out.println(""+e1.getName());
-        System.out.println(""+e1.getSalary());
+        Employee e1 = new Employee("1","Chaiwat",25000.0); // Create Object
+        e1.displayEmployee();
 
         Employee e2 = new Employee(); // Create Object
-        e2.setId("2");
-        e2.setName("Kanita");
-        e2.setSalary(18000.0);
 
-        System.out.println(""+e2.getName());
-        System.out.println(""+e2.getSalary());
+        Employee e3 = new Employee("id","Pair");
 
     }
 }

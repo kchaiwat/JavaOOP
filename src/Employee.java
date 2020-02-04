@@ -4,6 +4,22 @@ public class Employee {
     private String name;
     private Double salary;
 
+    // Default Constructor
+    public Employee(){
+
+    }
+
+    public Employee(String id,String name){
+        this.id = id;
+        this.name = name;
+    }
+
+    public Employee(String id, String name, Double salary){
+        this.id = id;
+        this.name = name;
+        this.salary  = salary;
+    }
+
     public void setId(String id){
         this.id = id;
     }
