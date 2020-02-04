@@ -1,23 +1,28 @@
-public class Employee {
+abstract class Employee {
     // Attribute
     private String id;
     private String name;
     private Double salary;
 
+    //Static Attribute
+    static int minSalary = 12000;
+
     // Default Constructor
     public Employee(){
-
+        System.out.println("I'm Employee");
     }
 
-    public Employee(String id,String name){
-        this.id = id;
-        this.name = name;
-    }
-
-    public Employee(String id, String name, Double salary){
-        this.id = id;
+    public Employee(String name, Double salary){
         this.name = name;
         this.salary  = salary;
+        displayEmployee();
+    }
+
+    public abstract void bonus();
+
+    public void displayEmployee(){
+        System.out.println("Name = "+this.name);
+        System.out.println("Salary = "+this.salary);
     }
 
     public void setId(String id){
@@ -30,12 +35,6 @@ public class Employee {
 
     public void setSalary(Double salary){
         this.salary = salary;
-    }
-
-    public void displayEmployee(){
-        System.out.println("ID = "+this.id);
-        System.out.println("Name = "+this.name);
-        System.out.println("Salary = "+this.salary);
     }
 
     public String getName(){
